@@ -20,8 +20,12 @@
             font-size: 30px;
         }
 
-        div {
-            background: linear-gradient()
+        .collab-color-class {
+            font-size: 56px;
+            background: linear-gradient(to right,
+                    #f30202, #e72424, #f9a825, #f9a825, #ffe592);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 
@@ -29,8 +33,8 @@
 
 <body>
     <div class="flex-container">
-        <div style="flex-grow: 300;color: linear-gradient(to right, red, yellow);"><b>Collab.</b>
-        </div>
+        <div class="collab-color-class"><b>collab.</b></div>
+        <div style="flex-grow:100;"></div>
         <div style="flex-grow: 1;color:black"><b>HOME</b></div>
         <div style="flex-grow: 1;color:grey">ABOUT</div>
         <div style="flex-grow: 1;color:grey">CONTACT</div>
