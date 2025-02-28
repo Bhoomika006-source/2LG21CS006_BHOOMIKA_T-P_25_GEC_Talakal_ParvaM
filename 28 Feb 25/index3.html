@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: rgb(0, 174, 255);
+            color: white;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+
+            .row,
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Agadi Thota</a>
+        <a href="#">Experience @ Thota</a>
+        <a href="#">Thota Products</a>
+        <a href="#">In & Around Thota</a>
+        <a href="#">Thota Gallery</a>
+        <a href="#">Contact Thota</a>
+        <a href="#">+91 88800 96000</a>
+        <a href="#">Booking</a>
+    </div>
+
+
+    <!-- Note -->
+    <div style="background:rgb(204, 132, 215);padding:10px">
+        <h4 style="text-align:center;font-size:30px;font-style:oblique ;"><B>AGADI THORA</B></h4>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>About Agadi Thota</h1>
+        <p><b>Agadi Thota</b> allows people to experience a day at farm and enjoy authentic North Karnataka traditional
+            unlimited food servings throughout the day from 10.30 am to 6pm.</p>
+        <img src="agadi1.jpg" alt="Paris" width="1500" height="800">
+
+    </div>
+
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2>Food Menu</h2>
+            <h5>Items Included:</h5>
+            <img src="agadi2.jpg" alt="Paris" width="400" height="200">
+            <p>Satisfy your taste buds with the authentic unlimited North Karnataka cuisine for whole day, the flavour
+                of which lingers in your mouth for quite some time and you’ll find yourself licking your fingers!</p>
+            <h3>Experience @ Thota</h3>
+            <p>Pictures speak a thousand words and when the location itself is picturesque, everything else takes a step
+                back. The drive to Agadi Thota leaves you spellbound and nature pulls you into the world of fantasy.
+            </p>
+            <h4>Experience@Thota</h4>
+            <img src="agadi3.jpg" alt="Paris" width="400" height="200">
+            <p>'Go a li'l Crazy' Experience the rich culture and tradition of North Karnataka by putting yourself into
+                the shoes of farmers and villagers for a day.</p>
+            <h4>Shop @Thota</h4>
+            <img src="image4.jpg" alt="Paris" width="400" height="200">
+            <p>Taste at its best.' Chemical free food is our birth right. With every purchase at Thota, enjoy the
+                healing benefits of Mother Nature & develop holistic approach towards life
+            </p>
+            <h4>Celebrate @Thota</h4>
+            <img src="agadi5.jpg" alt="Paris" width="400" height="200">
+            <p>Why limit your moments of joy to a monotonous square room? Come to Agadi Thota, a place with a touch of
+                tradition to celebrate, laugh & make memories because it is just the right venue for special occasions.
+            </p>
+            <h4>Go candid @ Thota</h4>
+            <img src="agadi6.jpg" alt="Paris" width="400" height="200">
+            <p>With abundance of greenery all around, Agadi Thota is a picturesque photo shoot location, where nature
+                offers beautiful backdrop. So, put your best dress on and get yourself framed.</p>
+        </div>
+        <div class="main">
+            <h2>AGADI THOTA</h2>
+            <h5>EXPERIENCE THE VILLAGE LIFE</h5>
+            <img src="agadi7.jpg" alt="Paris" width="1000" height="600">
+            <p>Some text..</p>
+            <p style="line-spacing: 4px;"> “Agadi Thota” was conceptualised in the year of 2000 with a theme we grow,
+                we offer, we process our
+                produce. In the year 2017, as a value addition and to generate additional income to make agriculture
+                more self sustainable, we started to offer a special authentic North Karnataka’s ethnic food which is a
+                geographical indicator of this region. The whole day we keep serving various items in unlimited
+                quantities, starting from Fruit juice as a welcome drink, different variety of seasonal naturally grown
+                and ripened fruit cuts, Millet based breakfast with natural Lemon Tea, Ragi Malt, Tamarind chigali,
+                Sugarcane Juice, North Karnataka cuisine Lunch, Butter milk, pan, evening Masala Girmit with Sev, Mirchi
+                to end with Tea/coffee.
+            </p>
+            <p style="line-spacing: 4px;">
+                Agadi Thota's main objective is to offer a whole day package of ethnic North Karnataka Unlimited food.
+                Along with that, to educate people about our culture and tradition, we also have Village life style self
+                experience as a complimentary to the guests. Promoting our north Karnataka food is our intention hence
+                we do not allow any outside food as we keep serving unlimited quantities of different items throughout
+                the day. Food is our service is mandatory, rest of the experiences are just complementary.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>THANK YOU FOR VISITING AGADI WEBSITE</h2>
+    </div>
+
+</body>
+
+</html>

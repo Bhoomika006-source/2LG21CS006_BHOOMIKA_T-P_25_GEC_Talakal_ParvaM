@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            background-color: tan;
+            color: black;
+        }
+
+        @media screen and (min-width: 992px) {
+            body {
+                background-color: blue;
+                color: black
+            }
+        }
+
+        @media screen and (min-width:480px) {
+            body {
+                background-color: olive;
+                color: white;
+            }
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Resize the browser window to see the effect!</h1>
+    <p>The media query will only apply if the media type is screen and the viewport is 480px wide or wider.</p>
+</body>
+
+</html>
