@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example </title>
+</head>
+
+<body>
+
+
+    <div>
+        <label for="txt1">value1</label>
+        <input type="txt" id="val1" name="val1" value="" placeholder="enter the value">
+    </div>
+    <div>
+        <label for="txt2">value2</label>
+        <input type="txt" id="val2" name="val2" value="" placeholder="enter the value">
+    </div>
+    <div>
+        <label for="txt2">value3</label>
+        <input type="txt" id="val3" name="val3" value="" placeholder="enter the value">
+    </div>
+
+    <div> <button onclick="getResult()">submit</button></div>
+    <h1 style="color:red" id="flname"></h1>
+
+
+    <script>
+        function getResult() {
+            var val1 = document.getElementById('val1').value;//val1=abc
+            var val2 = document.getElementById('val2').value;//val2=xyz
+            var val3 = document.getElementById('val3').value;//val3=pqr
+            var result;
+
+            if (!isNaN(val1) && !isNaN(val2) && !isNaN(val3)) { //val1=abc val2=xyz //  11 &&1
+                result = parseFloat(val1) + parseFloat(val2) + parseFloat(val3); ////abcxyz
+
+            } else {
+
+                result = val1 + val2 + val3;//abcxyz
+
+            }
+            document.getElementById('flname').innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>
