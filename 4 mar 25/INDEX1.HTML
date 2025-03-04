@@ -8,9 +8,13 @@
     <style>
         table,
         th,
-        tr td {
+        td {
             border: 1px solid rgb(0, 0, 0);
             border-collapse: collapse;
+        }
+
+        tr {
+            text-align: center;
         }
     </style>
 
@@ -30,8 +34,6 @@
         <div id="flnumber"></div>
 
 
-        <h2 style="color:#05f505" id="flnumber"></h2>
-
         <script>
             function getresult() {
                 var val1 = document.getElementById('val1').value;
@@ -46,13 +48,13 @@
                     resultm = parseFloat(val1) * parseFloat(val2);
                     resultd = parseFloat(val1) / parseFloat(val2);
                     resultmod = parseFloat(val1) % parseFloat(val2);
-                    resultinc = parseFloat(val1)++;
-                    resultdec = parseFloat(val1)--;
+                    resultinc = parseFloat(val1);
+                    resultdec = parseFloat(val1);
                     resultExe = parseFloat(val1) ** parseFloat(val2);
                     resultinc++;
                     resultdec--;
 
-                    result = `'<table>
+                    result = `<table style="width:100%;">
                         <tr>
                             <th>X</th>
                             <th>Y</th>
@@ -117,10 +119,32 @@
                         <td>${resultExe}</td>
                     </tr>
 
-                </table>'`;
+                </table>`;
 
                 } else {
-                    result = "please enter valid numbers"
+                    let resultconcat = val1 + val2;
+                    let concateArray = resultconcat.split('');
+                    let reverseArray = concateArray.reverse();
+                    let reversestring = reverseArray.join('');
+                    result = `<table style="width:100%">
+                        <h1>CONCATENATION</h1>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>Concat</th>
+                            <th>length</th>
+                            <th>Reverse</th>
+                        </tr>
+                        <tr style=" height:40px;">
+                            <td>${val1}</td>
+                            <td>${val2}</td>
+                            <td>${resultconcat}</td>
+                            <td>${resultconcat.length}</td>
+                            <td>${reversestring}</td>
+
+                        </tr>
+
+                    </table>`
                 }
                 document.getElementById('flnumber').innerHTML = result;
             }
