@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        tr td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <label for="val1">Input1:</label>
+        <input type="text" id="val1" name="val1" value="" placeholder="enter input1">
+    </div>
+    <div>
+        <label for="val2">Input2:</label>
+        <input type="text" id="val2" name="val2" value="" placeholder="enter input1">
+    </div>
+    <div>
+        <button onclick="getresult()">submit</button>
+        <div id="flnumber"></div>
+
+
+        <h2 style="color:#05f505" id="flnumber"></h2>
+
+        <script>
+            function getresult() {
+                var val1 = document.getElementById('val1').value;
+                var val2 = document.getElementById('val2').value;
+                var result;
+
+
+
+                if (!isNaN(val1) && !isNaN(val2)) {
+                    resulta = parseFloat(val1) + parseFloat(val2);
+                    results = parseFloat(val1) - parseFloat(val2);
+                    resultm = parseFloat(val1) * parseFloat(val2);
+                    resultd = parseFloat(val1) / parseFloat(val2);
+                    resultmod = parseFloat(val1) % parseFloat(val2);
+                    resultinc = parseFloat(val1)++;
+                    resultdec = parseFloat(val1)--;
+                    resultExe = parseFloat(val1) ** parseFloat(val2);
+                    resultinc++;
+                    resultdec--;
+
+                    result = `'<table>
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>OP</th>
+                            <th>EXP</th>
+                            <th style="width:50%;">RESULT</th>
+                        </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>+</td>
+                        <td>${val1}+${val2}</td>
+                        <td>${resulta}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>-</td>
+                        <td>${val1}-${val2}</td>
+                        <td>${results}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>*</td>
+                        <td>${val1}*${val2}</td>
+                        <td>${resultm}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>/</td>
+                        <td>${val1}/${val2}</td>
+                        <td>${resultd}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>%</td>
+                        <td>${val1}%${val2}</td>
+                        <td>${resultmod}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>++</td>
+                        <td>${val1}++</td>
+                        <td>${resultinc}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>--</td>
+                        <td>${val1}--</td>
+                        <td>${resultdec}</td>
+                    </tr>
+                    <tr style=" height:40px;">
+                        <td>${val1}</td>
+                        <td>${val2}</td>
+                        <td>**</td>
+                        <td>${val1}**${val2}</td>
+                        <td>${resultExe}</td>
+                    </tr>
+
+                </table>'`;
+
+                } else {
+                    result = "please enter valid numbers"
+                }
+                document.getElementById('flnumber').innerHTML = result;
+            }
+        </script>
+
+</body>
+
+</html>
