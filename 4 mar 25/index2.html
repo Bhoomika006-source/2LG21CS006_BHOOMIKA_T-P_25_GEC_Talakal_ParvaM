@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+
+        tr {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <label for="val1">Input1:</label>
+        <input type="text" id="val1" name="val1" value="" placeholder="enter input1">
+    </div>
+    <div>
+        <label for="val2">Input2:</label>
+        <input type="text" id="val2" name="val2" value="" placeholder="enter input1">
+    </div>
+    <div>
+        <button onclick="getresult()">submit</button>
+        <div id="flnumber"></div>
+
+
+        <script>
+            function getresult() {
+                var val1 = document.getElementById('val1').value;
+                var val2 = document.getElementById('val2').value;
+                var result;
+
+
+
+                if (!isNaN(val1) && !isNaN(val2)) {
+                    let resulta = (parseFloat(val1) + parseFloat(val2)) * (parseFloat(val1) - parseFloat(val2));
+                    results = parseFloat(val1)
+                    resultm = parseFloat(val1) * parseFloat(val2);
+                    resultd = parseFloat(val1) / parseFloat(val2);
+                    resultmod = parseFloat(val1) % parseFloat(val2);
+                    resultinc = parseFloat(val1);
+                    resultdec = parseFloat(val1);
+                    resultExe = parseFloat(val1) ** parseFloat(val2);
+                    resultinc++;
+                    resultdec--;
+
+                    result = `<table style="width:100%;">
+                       
+                    <tr style=" height:40px;">
+                        <td>
+                            a<sup>2</sup>-b<sup>2</sup>=(a+b)(a-b)<br>
+
+                            ${val1}<sup>2</sup>-${val2}<sup>2</sup><br>${resulta}=${resulta}
+                        </td>
+                       
+                    <tr style=" height:40px;">
+                       
+                    <tr style=" height:40px;">
+                       
+                    </tr>
+                    <tr style=" height:40px;">
+                        
+                    <tr style=" height:40px;">
+                        
+                    </tr>
+                    <tr style=" height:40px;">
+                        
+                    </tr>
+                    <tr style=" height:40px;">
+                        
+                    </tr>
+                    <tr style=" height:40px;">
+                        
+                    </tr>
+
+                </table>`;
+
+                } else {
+
+                    result = " please enter the number";
+
+                }
+                document.getElementById('flnumber').innerHTML = result;
+            }
+        </script>
+
+</body>
+
+</html>
