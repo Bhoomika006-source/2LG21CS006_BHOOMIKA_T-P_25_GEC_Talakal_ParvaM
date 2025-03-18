@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class student(models.Model):
+class Student(models.Model):
     sname = models.CharField(max_length=100)
     sclass = models.CharField(max_length=10)
     ssection = models.CharField(max_length=10)

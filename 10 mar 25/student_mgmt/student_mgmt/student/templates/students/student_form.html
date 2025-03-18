@@ -10,9 +10,10 @@
 
     <title>Student</title>
   </head>
-  <body>
+  <body class="bg-secondary">
     <div class=" d-flex align-items-center justify-content-center">
-      <div class="col-4">
+      <div class=" bg-light p-3 col-4">
+
     <form method="POST" >
       {% csrf_token %}
         <div class="row mb-3">
@@ -23,22 +24,22 @@
         </div>
         <div class="row mb-3">
             <select name="sclass" id="sclass" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                <option selected>select grade</option>
-                <option value="1">Grade 1</option>
-                <option value="2">Grade 2</option>
-                <option value="3">Grade 3</option>
-                <option value="4">Grade 4</option>
-                <option value="5">Grade 5</option>
-
+              <option >select grade</option>
+                <option {% if student.sclass == '1' %} selected  {% endif %} value="1">Grade 1</option>
+                <option {% if student.sclass == '2' %} selected  {% endif %} value="2">Grade 2</option>
+                <option {% if student.sclass == '3' %} selected  {% endif %} value="3">Grade 3</option>
+                <option {% if student.sclass == '4' %} selected  {% endif %} value="4">Grade 4</option>
+                <option {% if student.sclass == '5' %} selected  {% endif %} value="5">Grade 5</option>
+  
               </select>
           </div>
       
           <div class="row mb-3">
             <select name="ssection" id="ssection" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Select Section</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
+                <option {% if student.sclass == 'A' %} selected {% endif %}value="A">A</option>
+                <option {% if student.sclass == 'B' %} selected {% endif %}value="B">B</option>
+                <option {% if student.sclass == 'C' %} selected {% endif %}value="C">C</option>
 
               </select>
           </div>
@@ -46,27 +47,28 @@
           <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
           <div class="col-sm-10">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sgender" id="gridRadios1" value="male" checked>
+              <input class="form-check-input" type="radio" name="sgender" id="gridRadios1" value="male" {% if student.sgender == 'male' %} checked {% endif %}>
               <label class="form-check-label" for="gridRadios1">
                Male
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sgender" id="gridRadios2" value="female">
+              <input class="form-check-input" type="radio" name="sgender" id="gridRadios2" value="female" {% if student.sgender == 'female' %} checked {% endif %}>
               <label class="form-check-label" for="gridRadios2">
                 Female
               </label>
             </div>
+            
             
           </div>
         </fieldset>
         <div class="row mb-3">
             <label for="sdob" class="col-sm-2 col-form-label">DOB</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="sdob" name="sdob">
+              <input type="date" class="form-control" id="sdob" name="sdob" value="{{student.sdob}}">
             </div>
           </div>
-        <button type="submit" class="btn btn-primary">Add Student</button>
+        <button type="submit" class="btn btn-primary">submit</button>
       </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
