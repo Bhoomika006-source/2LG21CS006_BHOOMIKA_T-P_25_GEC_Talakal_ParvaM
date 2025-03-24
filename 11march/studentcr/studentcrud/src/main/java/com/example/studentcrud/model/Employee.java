@@ -13,6 +13,8 @@ public class Employee {
     private String email;
     private String phone;
     private String adress;
+    private String qualification;
+    private String link;
 
     public Long getId() {
         return id;
@@ -53,4 +55,21 @@ public class Employee {
     public void setAdress(String adress) {
         this.adress = adress;
     }
+
+    public String getQualification() {
+        return qualification;
+    }
+
+    public void setQualification(String qualification) {
+        this.qualification = qualification;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
 }
