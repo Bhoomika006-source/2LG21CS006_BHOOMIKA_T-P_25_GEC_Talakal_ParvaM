@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+            body {
+                background-image: url('/images/');
+                background-repeat: no-repeat;
+                background-size: 100%, 100%;
+    
+            }
+    </style>
+</head>
+<body>
+    <div th:replace="fragment/nav :: nav"></div>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 50%;">
+        <div class="w-50">
+            <h1 class="mt-5 text-center">Create Profile</h1>
+            <form th:action="@{/bhoom/save}" th:object="${profile}" method="post" class="mt-3">
+                <div class="form-group">
+                    <label for="studentName"><b>Name</b></label>
+                    <input type="text" class="form-control" id="studentName" th:field="*{name}" placeholder="Enter student name">
+                </div><br>
+              <div class="form-check">
+                    <label for="employeeLanguage">Gender:</label><br>
+                    <input class="form-check-input" type="radio" name="language" id="gridRadios1" value="Java"
+                        th:field="*{gender}">
+                    <label class="form-check-label" for="gridRadios1">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="language" id="gridRadios2" value="Python"
+                        th:field="*{gender}">
+                    <label class="form-check-label" for="gridRadios2">
+                        Female
+                    </label>
+                </div>
+    <br>
+        <div>
+            <label for="color">Color:</label>
+            <input type="color" id="color"th:field="*{color}"><br>
+        </div><br>
+        <div>
+        <label for="fontSize">Font Size (1-10):</label>
+        <input type="number" id="fontSize" min="1" max="10">
+        </div><br>
+                <button type="submit" class="btn btn-primary btn-block"><b>Submit</b></button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

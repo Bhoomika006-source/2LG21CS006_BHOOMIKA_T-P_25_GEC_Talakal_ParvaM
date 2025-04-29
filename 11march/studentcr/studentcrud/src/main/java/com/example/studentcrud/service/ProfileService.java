@@ -1,0 +1,33 @@
+package com.example.studentcrud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.studentcrud.model.Profile;
+import com.example.studentcrud.model.Staff;
+import com.example.studentcrud.repository.ProfileRepository;
+
+@Service
+public class ProfileService {
+
+    @Autowired
+    private ProfileRepository profileRepository;
+
+    public List<Staff> listAll() {
+        return profileRepository.findAll();
+    }
+
+    public void saveProfile(Profile pro) {
+        profileRepository.save(pro);
+    }
+
+    public Staff getProfile(Long id) {
+        return profileRepository.findById(id).orElse(null);
+    }
+
+    public void deleteProfile(Long id) {
+        profileRepository.deleteById(id);
+    }
+}

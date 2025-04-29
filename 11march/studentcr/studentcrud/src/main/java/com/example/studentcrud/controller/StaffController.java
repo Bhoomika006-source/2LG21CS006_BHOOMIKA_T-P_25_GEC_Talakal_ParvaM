@@ -38,7 +38,7 @@ public class StaffController {
 
     @PostMapping("/save")
     public String saveStaff(
-            @RequestParam("name") String name,
+            @RequestParam("n+ame") String name,
             @RequestParam("email") String email,
             @RequestParam("phone") String phone, @RequestParam("profilepic") MultipartFile profilePic) {
         String uploadDir = new File("src/main/resources/static/upload/").getAbsolutePath();
