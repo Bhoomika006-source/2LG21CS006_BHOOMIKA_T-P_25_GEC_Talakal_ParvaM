@@ -4,11 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class BuyerController {
 
-    @GetMapping("/Home")
-    public String homePage() {
-        return "home"; // resolves to home.html
+    @GetMapping("/buyers")
+    public String getBuyersPage() {
+        return "buyers"; // resolves to templates/buyers.html
     }
-
 }

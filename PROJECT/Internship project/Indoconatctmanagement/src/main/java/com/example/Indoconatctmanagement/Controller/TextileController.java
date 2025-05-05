@@ -4,11 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
+public class TextileController {
 
-    @GetMapping("/Home")
-    public String homePage() {
-        return "home"; // resolves to home.html
+    @GetMapping("/textile")
+    public String showTextilePage() {
+        return "Textileindustry"; // No .html extension
     }
-
 }

@@ -4,11 +4,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HomeController {
-
-    @GetMapping("/Home")
-    public String homePage() {
-        return "home"; // resolves to home.html
+public class SteelController {
+    @GetMapping("/")
+    public String redirectToSteelPower() {
+        return "redirect:/steelpower.html";
     }
-
 }
