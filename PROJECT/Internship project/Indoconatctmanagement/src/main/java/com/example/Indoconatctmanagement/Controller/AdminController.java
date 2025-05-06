@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.Indoconatctmanagement.service.AdminService;
 
 @Controller
-@RequestMapping("/admin")
+@RequestMapping("/login")
 public class AdminController {
 
     @Autowired

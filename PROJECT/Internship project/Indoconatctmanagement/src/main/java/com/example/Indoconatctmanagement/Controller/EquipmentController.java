@@ -8,7 +8,7 @@ import ch.qos.logback.core.model.Model;
 @Controller
 public class EquipmentController {
 
-    @GetMapping("/equipment")
+    @GetMapping("/construction-equipment")
     public String equipmentPage(Model model) {
         // Add attributes to model if needed
         return "constructionequipment"; // no .html extension

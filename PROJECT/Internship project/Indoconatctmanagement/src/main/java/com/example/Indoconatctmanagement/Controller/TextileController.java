@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class TextileController {
 
-    @GetMapping("/textile")
+    @GetMapping("/textile-industry")
     public String showTextilePage() {
         return "Textileindustry"; // No .html extension
     }
