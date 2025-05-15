@@ -11,6 +11,6 @@ public class DashboardController {
     @GetMapping("/dashboard")
     public String getDashboard(Model model) {
         // Add attributes to model if needed
-        return "dashboard"; // corresponds to dashboard.html
+        return "/dashboard"; // corresponds to dashboard.html
     }
 }

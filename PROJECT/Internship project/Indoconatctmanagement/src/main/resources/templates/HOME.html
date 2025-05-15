@@ -677,10 +677,8 @@
                 Welcome to Industrial Contact Management
             </div>
             <div class="top-links">
-                <a th:href="@{/login}"><i class="fas fa-sign-in-alt"></i> Login</a>
-                <a href="contact_us.html"><i class="fas fa-headset"></i> Help</a>
-                <a th:href="@{/login}">login</a>
-                <a th:href="@{/contact}">Help</a>
+                <a th:href="@{/login/login}">login</a>
+                <a th:href="@{/contactus}">Help</a>
             </div>
         </div>
     </div>
@@ -786,7 +784,7 @@
             <!-- Featured Products -->
             <div class="section-title">
                 <h2>Featured Products</h2>
-                <a href="viewall.html">View All <i class="fas fa-arrow-right"></i></a>
+                <a th:href="@{/buyers}">View All <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="products-grid">
                 <div class="product-card">
@@ -800,9 +798,9 @@
                             <i class="fas fa-map-marker-alt"></i> hospete, karnataka
                         </div>
                         <div>
-                            <button class="call-button"><a href="contact_us.html"><i class="fa fa-phone"
+                            <button class="call-button"><a th:href="@{/contactus}"><i class="fa fa-phone"
                                         style="color:#3498db;"> </i></a> Call</button>
-                            <button class="whatsapp-button"><a href="contact_us.html"><i class="fab fa-whatsapp"
+                            <button class="whatsapp-button"><a th:href="@{/contactus}"><i class="fab fa-whatsapp"
                                         style="color:#25D366;"></i></a> Whatsapp</button>
                         </div>
 
@@ -818,9 +816,9 @@
                         <div class="product-location">
                             <i class="fas fa-map-marker-alt"></i> Delhi, India
                         </div>
-                        <div> <button class="call-button"><a href="contact_us.html"><i class="fa fa-phone"
+                        <div> <button class="call-button"><a th:href="@{/contactus}"><i class="fa fa-phone"
                                         style="color:#3498db;"> </i></a> Call</button>
-                            <button class="whatsapp-button"><a href="contact_us.html"><i class="fab fa-whatsapp"
+                            <button class="whatsapp-button"><a th:href="@{/contactus}"><i class="fab fa-whatsapp"
                                         style="color:#25D366;"></i></a> Whatsapp</button>
                         </div>
                     </div>
@@ -835,9 +833,9 @@
                         <div class="product-location">
                             <i class="fas fa-map-marker-alt"></i> koppal, karnataka
                         </div>
-                        <div> <button class="call-button"><a href="contact_us.html"><i class="fa fa-phone"
+                        <div> <button class="call-button"><a th:href="@{/contactus}"><i class="fa fa-phone"
                                         style="color:#3498db;"> </i></a> Call</button>
-                            <button class="whatsapp-button"><a href="contact_us.html"><i class="fab fa-whatsapp"
+                            <button class="whatsapp-button"><a th:href="@{/contactus}"><i class="fab fa-whatsapp"
                                         style="color:#25D366;"></i></a> Whatsapp</button>
                         </div>
                     </div>
@@ -852,9 +850,9 @@
                         <div class="product-location">
                             <i class="fas fa-map-marker-alt"></i> Ahmedabad, India
                         </div>
-                        <div> <button class="call-button"><a href="contact_us.html"><i class="fa fa-phone"
+                        <div> <button class="call-button"><a th:href="@{/contactus}"><i class="fa fa-phone"
                                         style="color:#3498db;"> </i></a> Call</button>
-                            <button class="whatsapp-button"><a href="contact_us.html"><i class="fab fa-whatsapp"
+                            <button class="whatsapp-button"><a th:href="@{/contactus}"><i class="fab fa-whatsapp"
                                         style="color:#25D366;"></i></a> Whatsapp</button>
                         </div>
                     </div>
@@ -865,7 +863,7 @@
             <!-- Popular Categories -->
             <div class="section-title">
                 <h2>Popular Categories</h2>
-                <a href="buyers.html">View All <i class="fas fa-arrow-right"></i></a>
+                <a th:href="@{/buyers}">View All</a> <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="products-grid">
                 <div class="product-card">

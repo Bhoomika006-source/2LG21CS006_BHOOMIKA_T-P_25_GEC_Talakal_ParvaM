@@ -224,14 +224,12 @@
                 <span>Industrial Contact</span>
             </div>
             <ul class="nav-links">
-                <li><a href="HOME.html">Home</a></li>
-                <li><a href="viewall.html">Buyers</a></li>
-                <li><a href="supplier_login_page.html">Suppliers</a></li>
-                <li><a href="#">Services</a></li>
-                <li>
-                    <a href="contact_us.html">Help<i class="fas fa-chevron-down"></i></a>
-                </li>
-            </ul>
+                <li><a th:href="@{/Home}">Home</a></li>
+                <li><a th:href="@{/buyers}">Buyers</a></li>
+                <li><a th:href="@{/supplier_login}">Suppliers</a></li>
+                <li><a th:href="@{/services}">Services</a></li>
+                <li><a th:href="@{/dashboard}">Dashboard</a></li>
+           </ul>
         </div>
     </header>
 
@@ -257,7 +255,7 @@
                     <div class="error-message" id="password-error"></div>
                 </div>
 
-                <button type="submit" class="login-button">Login</button>
+                <button type="submit" class="login-button"><a th:href="@{/dashboard}">Login</a></button>
             </form>
 
             <div class="forgot-password">

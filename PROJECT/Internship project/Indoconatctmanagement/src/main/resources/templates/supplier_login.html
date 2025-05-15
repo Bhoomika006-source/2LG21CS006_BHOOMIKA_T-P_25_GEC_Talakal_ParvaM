@@ -136,14 +136,20 @@
             <a href="password_recovery_page.html">Forgot password?</a>
         </div>
 
-        <button class="login-btn">
-            <a href="add_new_industry.html">Log in</a>
-        </button>
+        <button class="login-btn" onclick="redirectToAddIndustry()"><a th:href="@{/contact-form}">Log in</a> </button>
+        
+
 
         <div class="signup">
             Don't have an account? <a href="supplier_registration_page.html">Sign up</a>
         </div>
     </div>
+    <script>
+    function redirectToAddIndustry() {
+        window.location. th:href = "@{/addIndustry}"; // Make sure the file name and case match
+    }
+</script>
+
 </body>
 
 </html>
