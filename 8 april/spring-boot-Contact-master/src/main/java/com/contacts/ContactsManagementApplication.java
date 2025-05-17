@@ -32,7 +32,7 @@ public class ContactsManagementApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
+		/TODO Auto-generated method stub/ 
 		// jdbcTemplate.query("select * from users",(rs,rownum)->new
 		// User(rs.getLong(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5))).forEach(u->log.info(u.toString()));
 		/*
